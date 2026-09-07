@@ -1,0 +1,21 @@
+{
+  "date": "Today's Indicative Market Rate (Prototype / Nagpur)",
+  "lastUpdated": "Updated Today at 10:00 AM IST",
+  "currency": "INR",
+  "unitGold": "per 10 grams",
+  "unitSilver": "per 1 kilogram",
+  "isLiveMock": true,
+  "disclaimer": "Rates shown are indicative demo market estimates for Nagpur bullion market. Final billing is calculated at real-time showroom checkout rate.",
+  "rates": {
+    "22K": "72,850",
+    "24K": "79,470",
+    "18K": "59,600",
+    "silver": "94,200"
+  },
+  "changes": {
+    "22K": "+₹240 (0.33%)",
+    "24K": "+₹280 (0.35%)",
+    "18K": "+₹190 (0.32%)",
+    "silver": "-₹150 (-0.16%)"
+  }
+}

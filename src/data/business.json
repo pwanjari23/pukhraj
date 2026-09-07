@@ -1,0 +1,29 @@
+{
+  "name": "Pukhraj Jewellers",
+  "city": "Nagpur",
+  "phone": "+91 712 000 0000 (VERIFY_WITH_OWNER)",
+  "phoneRaw": "+917120000000",
+  "whatsapp": "+91 98000 00000 (VERIFY_WITH_OWNER)",
+  "whatsappRaw": "+919800000000",
+  "email": "info@pukhrajjewellers.co.in",
+  "instagram": "https://www.instagram.com/pukhrajjewellers_nagpur/",
+  "instagramHandle": "@pukhrajjewellers_nagpur",
+  "facebook": "https://www.facebook.com/pukhrajjewellersnagpur/",
+  "googleMaps": "https://maps.google.com/?q=Pukhraj+Jewellers+Nagpur",
+  "googleMapsUrl": "https://maps.google.com/?q=Pukhraj+Jewellers+Nagpur",
+  "googleMapsEmbedUrl": "https://maps.google.com/maps?q=Pukhraj+Jewellers+Nagpur&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "latitude": "21.1458",
+  "longitude": "79.0882",
+  "address": "Main Showroom, Itwari / Dharampeth Commercial Hub, Nagpur, Maharashtra (VERIFY_WITH_OWNER)",
+  "landmark": "Near Central Avenue / High Street, Nagpur",
+  "heroVideo": "/videos/pukhraj-hero.mp4",
+  "heroPoster": "/images/hero-poster.webp",
+  "openingHours": [
+    { "days": "Monday – Saturday", "hours": "10:30 AM – 8:30 PM" },
+    { "days": "Sunday", "hours": "11:00 AM – 7:00 PM (Prior Appointment Recommended)" }
+  ],
+  "tagline": "Jewellery That Tells Your Story",
+  "subTagline": "Timeless craftsmanship for life's most unforgettable moments.",
+  "estYear": "Heritage Craftsmanship in Nagpur (VERIFY_WITH_OWNER)",
+  "hallmarkNote": "100% BIS Hallmarked Gold & IGI / SGL Certified Diamond Jewellery"
+}

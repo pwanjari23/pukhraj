@@ -1,0 +1,44 @@
+[
+  {
+    "id": "gold-jewellery",
+    "slug": "gold-jewellery",
+    "name": "Gold Jewellery",
+    "description": "Handcrafted in pure 22K and 18K gold by master artisans, blending royal Vidarbha heritage with timeless elegance.",
+    "subcategories": ["Necklaces", "Bangles", "Chains", "Earrings", "Rings", "Mangalsutra", "Kadas"]
+  },
+  {
+    "id": "diamond-jewellery",
+    "slug": "diamond-jewellery",
+    "name": "Diamond Jewellery",
+    "description": "Certified high-clarity diamonds masterfully set in white, rose, and yellow gold for radiant celebrations.",
+    "subcategories": ["Solitaire Rings", "Diamond Necklaces", "Tennis Bracelets", "Cocktail Rings", "Studs"]
+  },
+  {
+    "id": "bridal-jewellery",
+    "slug": "bridal-jewellery",
+    "name": "Bridal Jewellery",
+    "description": "Regal bridal masterpieces designed to crown her most sacred day with grandeur, sanctity, and eternal grace.",
+    "subcategories": ["Bridal Sets", "Chokers", "Maang Tikka", "Nath", "Haathphool", "Jhumkas", "Kamarbandh"]
+  },
+  {
+    "id": "polki-kundan",
+    "slug": "polki-kundan",
+    "name": "Polki & Kundan",
+    "description": "Uncut natural diamonds and fine Meenakari enamelwork reflecting royal Indian dynasties.",
+    "subcategories": ["Polki Chokers", "Kundan Sets", "Chandbalis", "Jadaau Bangles"]
+  },
+  {
+    "id": "daily-wear",
+    "slug": "daily-wear",
+    "name": "Daily Wear & Modern",
+    "description": "Lightweight, sophisticated everyday jewellery designed for effortless contemporary living.",
+    "subcategories": ["Lightweight Chains", "Minimal Rings", "Pendants", "Daily Bangles", "Hoops"]
+  },
+  {
+    "id": "silver-jewellery",
+    "slug": "silver-jewellery",
+    "name": "Silver & Puja Articles",
+    "description": "Pure 925 sterling silver ornaments, sacred idols, and auspicious pooja articles for auspicious blessings.",
+    "subcategories": ["Payals", "Pooja Thalis", "Silver Idols", "Sterling Bracelets"]
+  }
+]

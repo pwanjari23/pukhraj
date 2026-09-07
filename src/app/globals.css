@@ -1,26 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --gold-primary: #C5A059;
+  --gold-light: #E2C792;
+  --gold-dark: #997A3B;
+  --gold-gradient: linear-gradient(135deg, #DFBA73 0%, #C5A059 50%, #9E7934 100%);
+  --charcoal-900: #0a0a0c;
+  --charcoal-800: #121215;
+  --charcoal-700: #1a1a20;
+  --charcoal-600: #25252e;
+  --ivory-50: #FAF8F5;
+  --ivory-100: #F3EFEA;
+  --ivory-200: #E8E0D5;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background-color: var(--charcoal-900);
+  color: #ededed;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Luxury Typography Classes */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Gold Text & Shimmer Utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F3DEAC 0%, #C5A059 50%, #9F7833 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #E6CA85 0%, #C5A059 60%, #9A7734 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(197, 160, 89, 0.25);
+}
+
+.border-gold-accent {
+  border-color: rgba(197, 160, 89, 0.6);
+}
+
+/* Subtle Shimmer Effect for Luxury Badges */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-badge {
+  background: linear-gradient(90deg, rgba(197,160,89,0.15) 0%, rgba(226,199,146,0.4) 50%, rgba(197,160,89,0.15) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Mobile Safe Bottom Spacing to prevent fixed nav overlap */
+.pb-mobile-nav {
+  padding-bottom: 5.5rem;
+}
+
+@media (min-width: 768px) {
+  .pb-mobile-nav {
+    padding-bottom: 0;
+  }
+}
+
+/* Hide scrollbars gracefully for horizontal galleries */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Luxury Glassmorphism */
+.glass-nav {
+  background: rgba(10, 10, 12, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.18);
+}
+
+.glass-card {
+  background: rgba(18, 18, 21, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.glass-modal {
+  background: rgba(14, 14, 17, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(197, 160, 89, 0.28);
 }

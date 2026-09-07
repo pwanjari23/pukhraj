@@ -1,0 +1,44 @@
+[
+  {
+    "id": "wedding-season-2026",
+    "slug": "royal-wedding-season",
+    "name": "The Grand Royal Wedding Season",
+    "title": "Crowning Moments of Sacred Union",
+    "badge": "Bridal Exclusive 2026",
+    "description": "Experience our bespoke bridal suites with personal master artisan consultations and complimentary heirloom jewel cases.",
+    "ctaText": "Explore Bridal Haven",
+    "ctaLink": "/bridal",
+    "secondaryCtaText": "Book Consultation",
+    "secondaryCtaLink": "/contact",
+    "isActive": true,
+    "theme": "dark-gold"
+  },
+  {
+    "id": "akshaya-tritiya",
+    "slug": "akshaya-tritiya",
+    "name": "Akshaya Tritiya Sovereign Gold Collection",
+    "title": "Invoke Eternal Abundance & Prosperity",
+    "badge": "Auspicious Festival",
+    "description": "Pre-book pure 22K hallmarked gold coins, Lakshmi pendants, and lightweight festive kadas with guaranteed zero weight discrepancy.",
+    "ctaText": "View Auspicious Designs",
+    "ctaLink": "/collections?occasion=festive",
+    "secondaryCtaText": "Enquire Gold Rate",
+    "secondaryCtaLink": "#gold-rate",
+    "isActive": true,
+    "theme": "warm-gold"
+  },
+  {
+    "id": "dhanteras-diwali",
+    "slug": "dhanteras-diwali",
+    "name": "Dhanteras & Deepawali Luminaries",
+    "title": "Welcome Goddess Lakshmi with Sacred Gold & Silver",
+    "badge": "Upcoming Festive Edit",
+    "description": "Artisan 925 sterling silver pooja articles and limited edition festive gold bullion creations.",
+    "ctaText": "Explore Festive Edits",
+    "ctaLink": "/collections?occasion=festive",
+    "secondaryCtaText": "WhatsApp Concierge",
+    "secondaryCtaLink": "whatsapp",
+    "isActive": false,
+    "theme": "crimson-gold"
+  }
+]

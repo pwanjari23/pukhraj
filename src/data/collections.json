@@ -1,0 +1,112 @@
+[
+  {
+    "id": "gold-jewellery",
+    "slug": "gold-jewellery",
+    "name": "Gold Jewellery",
+    "subtitle": "Pure 22K Heritage Artistry",
+    "description": "Exquisite gold neckpieces, temple designs, and intricate bangles fashioned in 22K hallmarked gold by master craftsmen of Central India.",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Iconic Heritage",
+    "itemCount": 140
+  },
+  {
+    "id": "bridal-jewellery",
+    "slug": "bridal-jewellery",
+    "name": "Bridal Jewellery",
+    "subtitle": "The Royal Bride Collection",
+    "description": "Grand choker suites, raani haars, handcrafted matha pattis, and bridal bangles designed for her dream day.",
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Wedding Flagship",
+    "itemCount": 98
+  },
+  {
+    "id": "diamond-jewellery",
+    "slug": "diamond-jewellery",
+    "name": "Diamond Jewellery",
+    "subtitle": "Certified Radiance & Fire",
+    "description": "Flawlessly cut solitaires, sparkling cocktail rings, and fine diamond suites certified by premier international laboratories.",
+    "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Certified Brilliance",
+    "itemCount": 85
+  },
+  {
+    "id": "necklaces",
+    "slug": "necklaces",
+    "name": "Necklaces & Chokers",
+    "subtitle": "Statement Sculptures in Gold",
+    "description": "From regal layered gulbandhs to delicate everyday chains, designed to celebrate feminine elegance.",
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Bestsellers",
+    "itemCount": 65
+  },
+  {
+    "id": "bangles",
+    "slug": "bangles",
+    "name": "Bangles & Kadas",
+    "subtitle": "The Melodious Rhythm of Gold",
+    "description": "Traditional pichodi, antique patlis, intricately carved kadas, and diamond-studded bangles.",
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Heirloom Craft",
+    "itemCount": 72
+  },
+  {
+    "id": "rings",
+    "slug": "rings",
+    "name": "Rings & Solitaires",
+    "subtitle": "Symbols of Timeless Devotion",
+    "description": "Magnificent solitaires, cocktail diamond creations, and heritage signet rings.",
+    "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Signature",
+    "itemCount": 88
+  },
+  {
+    "id": "earrings",
+    "slug": "earrings",
+    "name": "Earrings & Jhumkas",
+    "subtitle": "Elegance Framed in Light",
+    "description": "Regal chandbalis, handcrafted temple jhumkas, modern studs, and delicate diamond danglers.",
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Most Loved",
+    "itemCount": 94
+  },
+  {
+    "id": "mangalsutra",
+    "slug": "mangalsutra",
+    "name": "Mangalsutra",
+    "subtitle": "Sacred Vows, Modern Elegance",
+    "description": "Honouring tradition with contemporary sensibilities; diamond-studded and gold black-bead sacred pendants.",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Sacred Promise",
+    "itemCount": 42
+  },
+  {
+    "id": "gemstones",
+    "slug": "gemstones",
+    "name": "Gemstones & Astrological",
+    "subtitle": "Treasures of Earth & Cosmic Energy",
+    "description": "Certified Yellow Sapphire (Pukhraj), Emerald (Panna), Ruby (Manik), and Natural Pearl settings.",
+    "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Certified Gems",
+    "itemCount": 38
+  },
+  {
+    "id": "daily-wear",
+    "slug": "daily-wear",
+    "name": "Daily Wear & Minimalist",
+    "subtitle": "Effortless Luxury",
+    "description": "Modern lightweight jewellery engineered for regular office, travel, and casual wear.",
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Modern Living",
+    "itemCount": 60
+  },
+  {
+    "id": "silver-jewellery",
+    "slug": "silver-jewellery",
+    "name": "Silver Jewellery & Pooja",
+    "subtitle": "925 Sterling Silver & Auspicious Gifts",
+    "description": "Handcrafted silver dinnerware, antique pooja thalis, silver idols, and contemporary payals.",
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=85",
+    "tag": "Sacred & Sterling",
+    "itemCount": 55
+  }
+]

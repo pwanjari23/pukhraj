@@ -1,0 +1,42 @@
+[
+  {
+    "id": "test-001",
+    "name": "Dr. Radhika Joshi",
+    "location": "Civil Lines, Nagpur",
+    "review": "The bespoke bridal polki necklace we crafted at Pukhraj Jewellers was the absolute centerpiece of my daughter's wedding. Their transparency in gold purity and weight calculations gave us complete peace of mind.",
+    "rating": 5,
+    "date": "November 2025",
+    "occasion": "Bridal Jewellery",
+    "isVerifiedPrototype": true
+  },
+  {
+    "id": "test-002",
+    "name": "Sameer & Ananya Kulkarni",
+    "location": "Ramdaspeth, Nagpur",
+    "review": "Choosing our engagement solitaire here was an unmatched experience. The personalized attention, IGI certification guidance, and zero-pressure consultation made our choice effortless and sacred.",
+    "rating": 5,
+    "date": "December 2025",
+    "occasion": "Engagement Solitaire",
+    "isVerifiedPrototype": true
+  },
+  {
+    "id": "test-003",
+    "name": "Sunita Deshmukh",
+    "location": "Dharampeth, Nagpur",
+    "review": "For over three generations, our family has trusted Pukhraj for all our Dhanteras and Akshaya Tritiya gold purchases. Their traditional Maharashtrian designs and BIS hallmarked purity are peerless.",
+    "rating": 5,
+    "date": "October 2025",
+    "occasion": "Festive Gold & Bangles",
+    "isVerifiedPrototype": true
+  },
+  {
+    "id": "test-004",
+    "name": "Amitabh Agrawal",
+    "location": "Wardha Road, Nagpur",
+    "review": "Purchased an astrological Ceylon Yellow Sapphire ring. The gemological certification, custom gold setting, and clarity explanation were top-tier. Highly recommended for genuine gemstones.",
+    "rating": 5,
+    "date": "January 2026",
+    "occasion": "Astrological Gemstone",
+    "isVerifiedPrototype": true
+  }
+]

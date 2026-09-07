@@ -1,0 +1,487 @@
+[
+  {
+    "id": "gold-necklace-001",
+    "slug": "royal-heritage-necklace",
+    "name": "Royal Heritage 22K Gold Choker",
+    "category": "Gold Jewellery",
+    "subcategory": "Necklaces",
+    "metal": "Gold",
+    "purity": "22K",
+    "weight": "48.20 g",
+    "price": "Price on Request",
+    "priceValue": 355000,
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85",
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "An imperial heirloom choker necklace sculpted in 22K yellow gold, featuring traditional filigree craftsmanship, delicate hanging gold bead drops, and royal embossing. Designed for the unforgettable Indian bride.",
+    "tags": ["bridal", "traditional", "featured", "heirloom", "hallmarked"],
+    "occasion": ["wedding", "festive"],
+    "style": ["traditional", "statement"],
+    "isNew": true,
+    "isTrending": true,
+    "isFeatured": true,
+    "bridalPieceType": "necklace",
+    "specifications": {
+      "metalColor": "Yellow Gold",
+      "hallmark": "BIS 916 Hallmarked",
+      "grossWeight": "48.20 g",
+      "netGoldWeight": "48.20 g",
+      "stone": "None (Pure Solid Gold)",
+      "certification": "Govt. Approved BIS Hallmarked Centre"
+    }
+  },
+  {
+    "id": "diamond-ring-002",
+    "slug": "aurora-solitaire-diamond-ring",
+    "name": "Aurora Brilliant Solitaire Ring",
+    "category": "Diamond Jewellery",
+    "subcategory": "Solitaire Rings",
+    "metal": "Diamond & 18K Gold",
+    "purity": "18K",
+    "weight": "4.80 g",
+    "price": "Price on Request",
+    "priceValue": 185000,
+    "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85",
+      "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "A 1.05 carat brilliant cut solitaire diamond cradled in an 18K white and rose gold micro-pavé band. Certified with exceptional fire, symmetry, and eye-clean scintillation.",
+    "tags": ["engagement", "solitaire", "trending", "bestseller"],
+    "occasion": ["engagement", "gifting", "daily-wear"],
+    "style": ["modern", "minimal"],
+    "isNew": true,
+    "isTrending": true,
+    "isFeatured": true,
+    "bridalPieceType": null,
+    "specifications": {
+      "metalColor": "Two-Tone (White & Rose Gold)",
+      "diamondCarat": "1.05 ct + 0.22 ct pavé",
+      "diamondClarity": "VVS1 / Colour E",
+      "grossWeight": "4.80 g",
+      "certification": "IGI / SGL Certified"
+    }
+  },
+  {
+    "id": "bridal-set-003",
+    "slug": "kalyani-temple-bridal-suite",
+    "name": "Kalyani Imperial Temple Bridal Suite",
+    "category": "Bridal Jewellery",
+    "subcategory": "Bridal Sets",
+    "metal": "Gold",
+    "purity": "22K",
+    "weight": "92.60 g",
+    "price": "Price on Request",
+    "priceValue": 680000,
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "The crown jewel of our royal bridal gallery. Intricate Goddess Lakshmi temple carvings flanked by divine peacocks, paired with matching oversized bridal jhumkas and statement centerpieces.",
+    "tags": ["bridal", "traditional", "featured", "temple"],
+    "occasion": ["wedding"],
+    "style": ["traditional", "statement"],
+    "isNew": false,
+    "isTrending": true,
+    "isFeatured": true,
+    "bridalPieceType": "necklace",
+    "specifications": {
+      "metalColor": "Antique Gold Finish",
+      "hallmark": "BIS 916 Hallmarked",
+      "grossWeight": "92.60 g",
+      "netGoldWeight": "88.40 g",
+      "stone": "Natural Burma Rubies & Emerald Cabochons",
+      "certification": "Govt. Approved Hallmarked"
+    }
+  },
+  {
+    "id": "gold-bangle-004",
+    "slug": "mayura-antique-gold-kadas",
+    "name": "Mayura Carved Antique Gold Kadas (Pair)",
+    "category": "Gold Jewellery",
+    "subcategory": "Bangles",
+    "metal": "Gold",
+    "purity": "22K",
+    "weight": "54.10 g",
+    "price": "Price on Request",
+    "priceValue": 398000,
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "Hand-chiseled screw-closure 22K antique gold bangles inspired by Central Indian courtly art. Adorned with delicate peacock motifs and textured filigree work.",
+    "tags": ["bestseller", "traditional", "bridal"],
+    "occasion": ["wedding", "festive"],
+    "style": ["traditional", "statement"],
+    "isNew": false,
+    "isTrending": true,
+    "isFeatured": true,
+    "bridalPieceType": "bangles",
+    "specifications": {
+      "metalColor": "Antique Matte Gold",
+      "hallmark": "BIS 916 Hallmarked",
+      "grossWeight": "54.10 g (Pair)",
+      "closure": "Internal Screw Lock Mechanism"
+    }
+  },
+  {
+    "id": "earrings-005",
+    "slug": "chandrika-polki-chandbalis",
+    "name": "Chandrika Royal Polki Chandbalis",
+    "category": "Polki & Kundan",
+    "subcategory": "Chandbalis",
+    "metal": "Gold & Polki",
+    "purity": "22K",
+    "weight": "28.40 g",
+    "price": "Price on Request",
+    "priceValue": 215000,
+    "image": "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "Regal crescent moon chandbalis embellished with uncut syndicate polki diamonds, cultured Basra seed pearls, and reverse meenakari enamelling.",
+    "tags": ["polki", "bridal", "trending"],
+    "occasion": ["wedding", "festive"],
+    "style": ["traditional", "statement"],
+    "isNew": true,
+    "isTrending": true,
+    "isFeatured": false,
+    "bridalPieceType": "earrings",
+    "specifications": {
+      "metalColor": "22K Gold Base with Enamel",
+      "stone": "Syndicate Uncut Diamonds & Natural Pearls",
+      "grossWeight": "28.40 g",
+      "backing": "Bombay Screw Back"
+    }
+  },
+  {
+    "id": "bridal-006",
+    "slug": "padmavati-maang-tikka",
+    "name": "Padmavati Royal Gold Maang Tikka",
+    "category": "Bridal Jewellery",
+    "subcategory": "Maang Tikka",
+    "metal": "Gold",
+    "purity": "22K",
+    "weight": "16.80 g",
+    "price": "Price on Request",
+    "priceValue": 125000,
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "An exquisite forehead ornament featuring intricate floral filigree, ruby drops, and a delicate pearl chain to frame the bride with aristocratic grace.",
+    "tags": ["bridal", "traditional"],
+    "occasion": ["wedding"],
+    "style": ["traditional"],
+    "isNew": false,
+    "isTrending": true,
+    "isFeatured": false,
+    "bridalPieceType": "maangTikka",
+    "specifications": {
+      "metalColor": "Yellow Gold",
+      "hallmark": "BIS 916 Hallmarked",
+      "grossWeight": "16.80 g"
+    }
+  },
+  {
+    "id": "bridal-007",
+    "slug": "maharani-traditional-nath",
+    "name": "Maharani Maharashtrian Motya Nath",
+    "category": "Bridal Jewellery",
+    "subcategory": "Nath",
+    "metal": "Gold",
+    "purity": "22K",
+    "weight": "6.20 g",
+    "price": "Price on Request",
+    "priceValue": 48000,
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "Authentic Vidarbha and Peshwai bride nose ring adorned with natural Basra pearls, radiant red spinel gemstones, and emerald beads.",
+    "tags": ["bridal", "traditional", "maharashtrian"],
+    "occasion": ["wedding", "festive"],
+    "style": ["traditional"],
+    "isNew": false,
+    "isTrending": false,
+    "isFeatured": false,
+    "bridalPieceType": "nath",
+    "specifications": {
+      "metalColor": "Yellow Gold",
+      "grossWeight": "6.20 g",
+      "pearls": "Natural Seed Pearls"
+    }
+  },
+  {
+    "id": "mangalsutra-008",
+    "slug": "samruddhi-diamond-mangalsutra",
+    "name": "Samruddhi Modern Diamond Mangalsutra",
+    "category": "Gold Jewellery",
+    "subcategory": "Mangalsutra",
+    "metal": "Diamond & 18K Gold",
+    "purity": "18K",
+    "weight": "8.90 g",
+    "price": "Price on Request",
+    "priceValue": 88000,
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "A refined interpretation of eternal sacred vows. Delicate double black-bead gold chain paired with a curved diamond arc pendant designed for modern daily styling.",
+    "tags": ["modern", "bestseller", "daily-wear"],
+    "occasion": ["wedding", "daily-wear"],
+    "style": ["modern", "minimal"],
+    "isNew": true,
+    "isTrending": true,
+    "isFeatured": true,
+    "bridalPieceType": null,
+    "specifications": {
+      "metalColor": "18K Yellow Gold",
+      "diamondCarat": "0.45 ct (GH-VS)",
+      "chainLength": "18 inches adjustable",
+      "grossWeight": "8.90 g"
+    }
+  },
+  {
+    "id": "daily-009",
+    "slug": "luna-gold-paperclip-chain",
+    "name": "Luna Geometric Paperclip 22K Gold Chain",
+    "category": "Daily Wear & Modern",
+    "subcategory": "Lightweight Chains",
+    "metal": "Gold",
+    "purity": "22K",
+    "weight": "12.40 g",
+    "price": "Price on Request",
+    "priceValue": 92000,
+    "image": "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "Ultra-sleek modern paperclip links handcrafted with mirror-polish 22K gold. Versatile enough to wear solo or layered with statement pendants.",
+    "tags": ["minimal", "modern", "new"],
+    "occasion": ["daily-wear", "gifting"],
+    "style": ["minimal", "modern"],
+    "isNew": true,
+    "isTrending": false,
+    "isFeatured": false,
+    "bridalPieceType": null,
+    "specifications": {
+      "metalColor": "High Polish Yellow Gold",
+      "hallmark": "BIS 916",
+      "length": "18 inches",
+      "grossWeight": "12.40 g"
+    }
+  },
+  {
+    "id": "forhim-010",
+    "slug": "rudra-solid-gold-mens-kada",
+    "name": "Rudra Hand-Carved Men's Gold Kada",
+    "category": "Gold Jewellery",
+    "subcategory": "Kadas",
+    "metal": "Gold",
+    "purity": "22K",
+    "weight": "42.50 g",
+    "price": "Price on Request",
+    "priceValue": 315000,
+    "image": "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "Substantial, commanding 22K yellow gold kada designed for men. Solid structural heft, rounded comfort interior, and refined fluted exterior detailing.",
+    "tags": ["for-him", "traditional", "statement"],
+    "occasion": ["for-him", "festive", "wedding"],
+    "style": ["traditional", "statement"],
+    "isNew": false,
+    "isTrending": true,
+    "isFeatured": true,
+    "bridalPieceType": null,
+    "specifications": {
+      "metalColor": "Yellow Gold (Satin Finish)",
+      "hallmark": "BIS 916 Hallmarked",
+      "diameter": "2.6 / 2.8 inches",
+      "grossWeight": "42.50 g"
+    }
+  },
+  {
+    "id": "gemstone-011",
+    "slug": "ceylon-pukhraj-yellow-sapphire-ring",
+    "name": "Ceylon Natural Pukhraj (Yellow Sapphire) Ring",
+    "category": "Gold Jewellery",
+    "subcategory": "Rings",
+    "metal": "Gold & Gemstone",
+    "purity": "22K",
+    "weight": "7.80 g",
+    "price": "Price on Request",
+    "priceValue": 145000,
+    "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "Our namesake masterpiece: an unheated 4.25 carat natural Ceylon Yellow Sapphire (Pukhraj) set in pure 22K gold, certified for astrological vitality, prosperity, and wisdom.",
+    "tags": ["pukhraj", "gemstone", "featured", "astrological"],
+    "occasion": ["daily-wear", "festive", "gifting"],
+    "style": ["traditional", "statement"],
+    "isNew": false,
+    "isTrending": true,
+    "isFeatured": true,
+    "bridalPieceType": null,
+    "specifications": {
+      "metalColor": "Pure 22K Gold",
+      "gemstone": "Natural Unheated Yellow Sapphire (4.25 Carats)",
+      "origin": "Sri Lanka (Ceylon)",
+      "certification": "Government Gemological Laboratory"
+    }
+  },
+  {
+    "id": "diamond-012",
+    "slug": "celeste-eternity-tennis-bracelet",
+    "name": "Celeste Round Diamond Tennis Bracelet",
+    "category": "Diamond Jewellery",
+    "subcategory": "Tennis Bracelets",
+    "metal": "Diamond & 18K White Gold",
+    "purity": "18K",
+    "weight": "14.20 g",
+    "price": "Price on Request",
+    "priceValue": 265000,
+    "image": "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "Continuous stream of 4.50 carats of hand-selected round brilliant cut diamonds linked in a flexible 18K white gold four-prong setting with double safety lock.",
+    "tags": ["diamond", "modern", "featured", "anniversary"],
+    "occasion": ["engagement", "wedding", "gifting"],
+    "style": ["modern", "statement"],
+    "isNew": true,
+    "isTrending": true,
+    "isFeatured": true,
+    "bridalPieceType": null,
+    "specifications": {
+      "metalColor": "18K White Gold",
+      "diamondCarat": "4.50 ct total weight",
+      "diamondGrade": "EF Colour, VVS Clarity",
+      "clasp": "Concealed Box with Double Safety Latch"
+    }
+  },
+  {
+    "id": "silver-013",
+    "slug": "ashta-lakshmi-silver-pooja-thali",
+    "name": "Ashta Lakshmi 925 Sterling Silver Pooja Thali",
+    "category": "Silver & Puja Articles",
+    "subcategory": "Pooja Thalis",
+    "metal": "Silver",
+    "purity": "925 Silver",
+    "weight": "320.00 g",
+    "price": "Price on Request",
+    "priceValue": 38000,
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "Exquisitely embossed 925 hallmarked silver thali depicting the eight auspicious forms of Goddess Lakshmi. Accompanied by matching diya, bell, and kumkum holders.",
+    "tags": ["silver", "pooja", "gifting", "festive"],
+    "occasion": ["festive", "gifting", "wedding"],
+    "style": ["traditional"],
+    "isNew": false,
+    "isTrending": false,
+    "isFeatured": false,
+    "bridalPieceType": null,
+    "specifications": {
+      "metal": "925 Sterling Silver",
+      "purity": "92.5% Pure Silver Hallmarked",
+      "weight": "320 g",
+      "diameter": "10.5 inches"
+    }
+  },
+  {
+    "id": "earrings-014",
+    "slug": "ananya-floral-diamond-studs",
+    "name": "Ananya Floral Solitaire Diamond Studs",
+    "category": "Diamond Jewellery",
+    "subcategory": "Studs",
+    "metal": "Diamond & 18K Gold",
+    "purity": "18K",
+    "weight": "3.40 g",
+    "price": "Price on Request",
+    "priceValue": 45000,
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "Subtle floral cluster ear studs set in 18K yellow gold, showcasing 0.60 carats of sparkling diamonds for day-to-evening versatility.",
+    "tags": ["minimal", "gifting", "daily-wear"],
+    "occasion": ["daily-wear", "gifting", "engagement"],
+    "style": ["minimal", "modern"],
+    "isNew": true,
+    "isTrending": false,
+    "isFeatured": false,
+    "bridalPieceType": "earrings",
+    "specifications": {
+      "metalColor": "18K Yellow Gold",
+      "diamondCarat": "0.60 ct (GH-VVS)",
+      "grossWeight": "3.40 g"
+    }
+  },
+  {
+    "id": "gold-necklace-015",
+    "slug": "aadya-rani-haar-layered-necklace",
+    "name": "Aadya Multi-Strand Rani Haar Necklace",
+    "category": "Gold Jewellery",
+    "subcategory": "Necklaces",
+    "metal": "Gold",
+    "purity": "22K",
+    "weight": "74.80 g",
+    "price": "Price on Request",
+    "priceValue": 545000,
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "A regal long bridal haar cascading in seven handcrafted gold beaded strands, anchored by a grand temple pendant inlaid with ruby polki accents.",
+    "tags": ["bridal", "traditional", "statement"],
+    "occasion": ["wedding"],
+    "style": ["traditional", "statement"],
+    "isNew": false,
+    "isTrending": true,
+    "isFeatured": true,
+    "bridalPieceType": "necklace",
+    "specifications": {
+      "metalColor": "Yellow Gold",
+      "hallmark": "BIS 916",
+      "grossWeight": "74.80 g",
+      "length": "26 inches"
+    }
+  },
+  {
+    "id": "bridal-bangle-016",
+    "slug": "navratna-heritage-kada",
+    "name": "Navratna Imperial Openable Gold Kada",
+    "category": "Bridal Jewellery",
+    "subcategory": "Bangles",
+    "metal": "Gold",
+    "purity": "22K",
+    "weight": "36.20 g",
+    "price": "Price on Request",
+    "priceValue": 275000,
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85"
+    ],
+    "description": "Sacred nine astrological gems embedded along an antique sculpted 22K gold cuff with intricate floral jaali motifs.",
+    "tags": ["bridal", "traditional", "gemstone"],
+    "occasion": ["wedding", "festive"],
+    "style": ["traditional"],
+    "isNew": true,
+    "isTrending": false,
+    "isFeatured": false,
+    "bridalPieceType": "bangles",
+    "specifications": {
+      "metalColor": "22K Antique Yellow Gold",
+      "grossWeight": "36.20 g",
+      "stones": "Certified Navratna (9 Sacred Gems)"
+    }
+  }
+]

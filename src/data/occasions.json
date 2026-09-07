@@ -1,0 +1,56 @@
+[
+  {
+    "id": "wedding",
+    "name": "Wedding & Grand Celebrations",
+    "slug": "wedding",
+    "tagline": "Crowning Glory for the Royal Bride",
+    "description": "Opulent bridal chokers, raani haars, and complete heirloom suites handcrafted to turn weddings into unforgettable legacies.",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85",
+    "count": "120+ Curated Designs"
+  },
+  {
+    "id": "engagement",
+    "name": "Engagement & Promises",
+    "slug": "engagement",
+    "tagline": "Two Souls, One Unbroken Sparkle",
+    "description": "Exquisite solitaires, timeless diamond bands, and custom couple rings crafted to symbolise everlasting devotion.",
+    "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85",
+    "count": "80+ Curated Designs"
+  },
+  {
+    "id": "festive",
+    "name": "Festive & Auspicious",
+    "slug": "festive",
+    "tagline": "Blessings of Dhanteras & Diwali",
+    "description": "Traditional temple jewellery, Lakshmi motifs, and auspicious gold coins to invoke divine prosperity.",
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85",
+    "count": "95+ Curated Designs"
+  },
+  {
+    "id": "daily-wear",
+    "name": "Daily Elegance",
+    "slug": "daily-wear",
+    "tagline": "Subtle Luxury for Everyday Moments",
+    "description": "Feather-light yellow & rose gold pieces created for effortless boardroom chic and weekend comfort.",
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85",
+    "count": "110+ Curated Designs"
+  },
+  {
+    "id": "gifting",
+    "name": "Memorable Gifting",
+    "slug": "gifting",
+    "tagline": "Wrapped in Emotion & Pure Gold",
+    "description": "Thoughtful anniversary pendants, birthday earrings, and milestone tokens sealed with timeless sentiment.",
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85",
+    "count": "75+ Curated Designs"
+  },
+  {
+    "id": "for-him",
+    "name": "For Him",
+    "slug": "for-him",
+    "tagline": "Understated Power & Distinction",
+    "description": "Bold gold kadas, regal signet rings, textured bracelets, and statement lapel brooches for the modern gentleman.",
+    "image": "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=1000&q=85",
+    "count": "45+ Curated Designs"
+  }
+]

@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pukhraj Jewellers — Digital Flagship
 
-## Getting Started
+> **Luxury Indian Jewellery Redesign for Pukhraj Jewellers, Nagpur**  
+> An ultra-premium, cinematic, JSON-driven digital showroom prototype built with Next.js 16, React 19, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+---
+
+## 💎 Features & Highlights
+
+- **Cinematic Fullscreen Hero Reel**: 1080p high-profile MP4/WebM video hero with smooth crossfades, ambient luxury lighting, and instantaneous playback.
+- **100% JSON-Driven Architecture**: All inventory, collections, business info, gold rates, and articles live under `src/data/*.json`.
+- **Interactive Flagship Utilities**:
+  - 3-Step **Jewellery Finder** with dynamic budget and style filtering.
+  - **Bridal Look Builder** with live total value estimation and 1-click WhatsApp export.
+  - **Gift Finder** curated by occasion and recipient.
+  - Client-side **Wishlist** & **Compare** (up to 3 pieces) powered by `localStorage`.
+  - Fullscreen search overlay.
+- **Conversion & Contact Matrix**:
+  - Direct WhatsApp enquiry generators with pre-filled product specs.
+  - Real Google Maps showroom directions and interactive showroom map panel.
+  - Appointment booking modal with WhatsApp handoff.
+- **Live Gold Rates**: Real-time indicative gold & silver ticker with historical context.
+- **Executive Pitch Deck**: Dedicated hidden route at `/presentation` for showroom owner walkthrough.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router, Server & Client Components)
+- **UI & Styling**: React 19, Tailwind CSS v4, Lucide Icons, Canvas Confetti
+- **Animations**: Framer Motion (staggered entrances, layout transitions, Ken Burns zoom)
+- **Deployment**: Vercel
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000) to view the live site.
