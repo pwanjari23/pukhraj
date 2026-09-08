@@ -12,10 +12,10 @@ export default function Footer({ onOpenAppointment }) {
 
 
   return (
-    <footer className="bg-[#070709] border-t border-[#C5A059]/20 text-neutral-400 font-sans pb-24 md:pb-12 pt-16">
+    <footer className="bg-[#070709] border-t border-[#C5A059]/20 text-neutral-400 font-sans pb-24 md:pb-12 pt-8 sm:pt-12 md:pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Brand Promise Banner */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-12 mb-12 border-b border-white/10 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 pb-8 mb-8 md:pb-12 md:mb-12 border-b border-white/10 text-center md:text-left">
           <div className="flex items-center gap-4 justify-center md:justify-start">
             <div className="w-12 h-12 rounded-full bg-[#C5A059]/10 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] shrink-0">
               <ShieldCheck className="w-6 h-6" />

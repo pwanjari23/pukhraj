@@ -68,7 +68,7 @@ export default function RootClientLayout({ children }) {
         onOpenAppointment={openAppointment}
       />
 
-      <main className="min-h-screen pb-mobile-nav">
+      <main className="min-h-screen">
         {children}
       </main>
 
