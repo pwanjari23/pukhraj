@@ -45,7 +45,7 @@ export default function BridalHavenPage() {
           </h1>
 
           <p className="text-xs sm:text-base text-neutral-300 font-sans font-light max-w-2xl mx-auto leading-relaxed">
-            Welcome to Central India's sanctuary of royal bridal karigari. Each suite is cast in pure 22K hallmarked gold and uncut natural Polki, crafted to turn sacred vows into generational legacies.
+            Welcome to Central India&apos;s sanctuary of royal bridal karigari. Each suite is cast in pure 22K hallmarked gold and uncut natural Polki, crafted to turn sacred vows into generational legacies.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">

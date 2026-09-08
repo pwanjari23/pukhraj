@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, CheckCircle, MessageCircle, Clock, MapPin } from 'lucide-react';
@@ -17,6 +17,17 @@ export default function AppointmentModal({ isOpen, onClose }) {
     reset,
     formState: { errors, isSubmitting }
   } = useForm();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -40,7 +51,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+      <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6 overflow-hidden">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -50,19 +61,25 @@ export default function AppointmentModal({ isOpen, onClose }) {
           className="fixed inset-0 bg-black/85 backdrop-blur-md"
         />
 
-        {/* Modal Card */}
+        {/* Modal / Bottom Sheet Card */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-lg glass-modal rounded-sm p-6 sm:p-8 z-10 border border-[#C5A059]/40 shadow-2xl"
+          initial={{ y: '100%', opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: '100%', opacity: 0 }}
+          transition={{ type: 'spring', damping: 28, stiffness: 300 }}
+          className="relative w-full max-w-lg max-h-[92vh] sm:max-h-[85vh] bg-[#121215] border-t sm:border border-[#C5A059]/40 rounded-t-2xl sm:rounded-sm p-5 sm:p-8 z-10 shadow-2xl flex flex-col pb-safe sm:pb-8 overflow-y-auto no-scrollbar"
         >
+          {/* Mobile Pull Handle */}
+          <div className="sm:hidden pt-1 pb-2 flex justify-center shrink-0">
+            <div className="w-12 h-1 bg-white/20 rounded-full" />
+          </div>
+
           {/* Close Button */}
           <button
             type="button"
             onClick={handleReset}
             aria-label="Close appointment modal"
-            className="absolute top-4 right-4 text-neutral-400 hover:text-white p-1 rounded-full bg-white/5"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 text-neutral-400 hover:text-white p-1 rounded-full bg-white/5 min-touch-target flex items-center justify-center"
           >
             <X className="w-5 h-5" />
           </button>

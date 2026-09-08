@@ -12,6 +12,8 @@ import ProductQuickView from '@/components/products/ProductQuickView';
 import CompareDrawer from '@/components/products/CompareDrawer';
 import { useCompare } from '@/hooks/useCompare';
 
+import MobileExploreMenu from './MobileExploreMenu';
+
 const GlobalUIContext = createContext(null);
 
 export function useGlobalUI() {
@@ -21,6 +23,7 @@ export function useGlobalUI() {
 export default function RootClientLayout({ children }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [appointmentOpen, setAppointmentOpen] = useState(false);
+  const [exploreMenuOpen, setExploreMenuOpen] = useState(false);
   const [quickViewProduct, setQuickViewProduct] = useState(null);
 
   const {
@@ -39,6 +42,9 @@ export default function RootClientLayout({ children }) {
   const openAppointment = () => setAppointmentOpen(true);
   const closeAppointment = () => setAppointmentOpen(false);
 
+  const openExploreMenu = () => setExploreMenuOpen(true);
+  const closeExploreMenu = () => setExploreMenuOpen(false);
+
   const openQuickView = (product) => setQuickViewProduct(product);
   const closeQuickView = () => setQuickViewProduct(null);
 
@@ -47,6 +53,8 @@ export default function RootClientLayout({ children }) {
       value={{
         openSearch,
         openAppointment,
+        openExploreMenu,
+        closeExploreMenu,
         openQuickView,
         addToCompare,
         openCompare: () => setCompareOpen(true),
@@ -66,11 +74,16 @@ export default function RootClientLayout({ children }) {
 
       <Footer onOpenAppointment={openAppointment} />
 
-      <MobileBottomNav />
+      <MobileBottomNav onOpenExplore={openExploreMenu} />
 
       <FloatingActions />
 
-      {/* Global Modals */}
+      {/* Global Modals & Sheets */}
+      <MobileExploreMenu
+        isOpen={exploreMenuOpen}
+        onClose={closeExploreMenu}
+      />
+
       <SearchOverlay
         isOpen={searchOpen}
         onClose={closeSearch}

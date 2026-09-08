@@ -7,6 +7,8 @@ import GoldRate from '@/components/home/GoldRate';
 import CollectionsSection from '@/components/home/CollectionsSection';
 import NewArrivals from '@/components/home/NewArrivals';
 import TrendingSection from '@/components/home/TrendingSection';
+import MobileQuickExplore from '@/components/home/MobileQuickExplore';
+import MobileJewelleryFinder from '@/components/home/MobileJewelleryFinder';
 import JewelleryFinder from '@/components/features/JewelleryFinder';
 import ShopByOccasion from '@/components/home/ShopByOccasion';
 import BridalSection from '@/components/home/BridalSection';
@@ -33,7 +35,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col w-full">
-      {/* 3. Fullscreen Cinematic Video Hero */}
+      {/* 3. Fullscreen Cinematic Video Hero (Mobile compact ~75vh / Desktop fullscreen) */}
       <Hero onOpenAppointment={openAppointment} />
 
       {/* Seasonal / Festival Campaign Ribbon if activated in campaigns.json */}
@@ -52,11 +54,18 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* 4. Quick Contact Actions */}
-      <QuickActionBar onOpenAppointment={openAppointment} />
+      {/* Mobile Quick Explore: 2-column compact category grid immediately after hero */}
+      <MobileQuickExplore />
 
-      {/* 5. Gold Rate */}
-      <GoldRate />
+      {/* 4. Quick Contact Actions - Desktop only */}
+      <div className="hidden md:block">
+        <QuickActionBar onOpenAppointment={openAppointment} />
+      </div>
+
+      {/* 5. Gold Rate - Desktop only */}
+      <div className="hidden md:block">
+        <GoldRate />
+      </div>
 
       {/* 6. Collection Explorer */}
       <CollectionsSection />
@@ -75,11 +84,18 @@ export default function HomePage() {
         compareIds={compareIds}
       />
 
-      {/* 9. Jewellery Finder */}
-      <JewelleryFinder onQuickView={openQuickView} />
+      {/* 9. Mobile Concierge Jewellery Finder (Mobile only) */}
+      <MobileJewelleryFinder
+        onQuickView={openQuickView}
+        onAddToCompare={addToCompare}
+        compareIds={compareIds}
+      />
 
-      {/* 10. Shop by Occasion */}
-      <ShopByOccasion />
+      {/* 10. Desktop Discovery: Jewellery Finder & Shop by Occasion */}
+      <div className="hidden md:block">
+        <JewelleryFinder onQuickView={openQuickView} />
+        <ShopByOccasion />
+      </div>
 
       {/* 11. Bridal Cinematic Experience */}
       <BridalSection onOpenAppointment={openAppointment} />

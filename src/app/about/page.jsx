@@ -62,7 +62,7 @@ export default function AboutPage() {
               The Pukhraj Origin
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl text-[#FAF8F5] font-normal leading-tight">
-              Named After Jupiter's Most Auspicious Gem
+              Named After Jupiter&apos;s Most Auspicious Gem
             </h2>
             <p>
               Our establishment takes its revered name from <em>Pukhraj</em>—the radiant Yellow Sapphire associated with Jupiter (Brihaspati). In Indian tradition, Pukhraj symbolizes cosmic wisdom, supreme virtue, prosperity, and joy.
@@ -71,7 +71,7 @@ export default function AboutPage() {
               Located in the commercial heart of Nagpur, Maharashtra, Pukhraj Jewellers was envisioned as a sanctuary where families can acquire authentic hallmarked gold, diamond solitaires, and sacred pooja silver with total peace of mind.
             </p>
             <p>
-              Every diamond is graded with strict laboratory standards, and every piece of gold carries the Government of India's BIS 916 hallmarking laser inscription.
+              Every diamond is graded with strict laboratory standards, and every piece of gold carries the Government of India&apos;s BIS 916 hallmarking laser inscription.
             </p>
 
             <div className="p-4 bg-white/5 border border-white/10 rounded-sm text-xs space-y-1">

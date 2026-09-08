@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, MessageCircle, Calendar, Trash2, CheckCircle2, Plus } from 'lucide-react';
+import { Sparkles, MessageCircle, Calendar, Trash2, CheckCircle2, Plus, ArrowRight, Layers } from 'lucide-react';
 import productsData from '@/data/products.json';
 import { createBridalLookWhatsAppLink } from '@/utils/whatsapp';
 import SectionHeading from '@/components/common/SectionHeading';
+import MobileBridalLookSheet from '@/components/home/MobileBridalLookSheet';
 
 export default function BridalLookBuilder({ onOpenAppointment }) {
   // Available pool of pieces from JSON
@@ -15,6 +16,7 @@ export default function BridalLookBuilder({ onOpenAppointment }) {
   const bangles = productsData.filter((p) => p.bridalPieceType === 'bangles' || p.subcategory === 'Bangles');
   const maangTikkas = productsData.filter((p) => p.bridalPieceType === 'maangTikka' || p.tags?.includes('bridal'));
   const naths = productsData.filter((p) => p.bridalPieceType === 'nath');
+  const rings = productsData.filter((p) => p.subcategory?.toLowerCase().includes('ring'));
 
   // Selected state for each component of the bridal suite
   const [selectedNecklace, setSelectedNecklace] = useState(necklaces[0] || null);
@@ -22,9 +24,11 @@ export default function BridalLookBuilder({ onOpenAppointment }) {
   const [selectedBangles, setSelectedBangles] = useState(bangles[0] || null);
   const [selectedMaangTikka, setSelectedMaangTikka] = useState(maangTikkas[0] || null);
   const [selectedNath, setSelectedNath] = useState(naths[0] || null);
+  const [selectedRing, setSelectedRing] = useState(rings[0] || null);
 
   const [activeSlot, setActiveSlot] = useState('necklace'); // current slot for selecting from list
   const [savedSuccess, setSavedSuccess] = useState(false);
+  const [mobileSheetOpen, setMobileSheetOpen] = useState(false);
 
   // Array of currently chosen items
   const currentSuite = [
@@ -32,7 +36,8 @@ export default function BridalLookBuilder({ onOpenAppointment }) {
     { slotId: 'earrings', title: 'Earrings / Jhumkas', item: selectedEarrings, pool: earrings, setter: setSelectedEarrings },
     { slotId: 'bangles', title: 'Bridal Bangles / Kadas', item: selectedBangles, pool: bangles, setter: setSelectedBangles },
     { slotId: 'maangTikka', title: 'Maang Tikka', item: selectedMaangTikka, pool: maangTikkas, setter: setSelectedMaangTikka },
-    { slotId: 'nath', title: 'Maharashtrian Motya Nath', item: selectedNath, pool: naths, setter: setSelectedNath }
+    { slotId: 'nath', title: 'Maharashtrian Motya Nath', item: selectedNath, pool: naths, setter: setSelectedNath },
+    { slotId: 'ring', title: 'Cocktail / Solitaire Ring', item: selectedRing, pool: rings, setter: setSelectedRing }
   ];
 
   const selectedCount = currentSuite.filter((s) => Boolean(s.item)).length;
@@ -62,7 +67,7 @@ export default function BridalLookBuilder({ onOpenAppointment }) {
   const activeSlotObj = currentSuite.find((s) => s.slotId === activeSlot) || currentSuite[0];
 
   return (
-    <section className="py-20 md:py-28 bg-[#09090b] relative text-white">
+    <section className="py-10 sm:py-14 md:py-28 bg-[#09090b] relative text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           tag="Interactive Atelier"
@@ -70,7 +75,65 @@ export default function BridalLookBuilder({ onOpenAppointment }) {
           subtitle="Assemble your bespoke wedding trousseau piece by piece. Mix royal chokers, jhumkas, kadas, and naths to visualize your complete bridal majesty."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* Mobile Presentation: Compact Trigger Card opening Bottom Sheet */}
+        <div className="block md:hidden">
+          <div className="bg-gradient-to-br from-[#18181f] to-[#111115] border border-[#C5A059]/35 rounded-sm p-5 shadow-2xl space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] uppercase tracking-widest text-[#C5A059] font-sans font-semibold flex items-center gap-1.5">
+                <Layers className="w-3.5 h-3.5" />
+                <span>Custom Trousseau Suite</span>
+              </span>
+              <span className="text-xs text-neutral-400 font-sans">
+                6 Adornments
+              </span>
+            </div>
+
+            <div>
+              <h3 className="font-serif text-xl text-[#FAF8F5]">
+                Build Your Royal Bridal Look
+              </h3>
+              <p className="text-xs text-neutral-300 font-sans mt-1 leading-relaxed">
+                Mix and match imperial necklaces, earrings, bangles, maang tikkas, and naths to curate your signature suite.
+              </p>
+            </div>
+
+            {/* Visual Mini Badges */}
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              {['Necklace', 'Earrings', 'Bangles', 'Maang Tikka', 'Nath', 'Ring'].map((slotName) => (
+                <span
+                  key={slotName}
+                  className="px-2.5 py-1 text-[10px] font-sans bg-white/5 border border-white/10 text-neutral-300 rounded-full"
+                >
+                  {slotName}
+                </span>
+              ))}
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setMobileSheetOpen(true)}
+              className="w-full py-3 bg-gradient-to-r from-[#DFBA73] via-[#C5A059] to-[#9E7934] text-black font-sans text-xs uppercase tracking-widest font-semibold rounded-sm shadow-xl shadow-[#C5A059]/20 flex items-center justify-center gap-2 min-touch-target"
+            >
+              <Sparkles className="w-4 h-4" />
+              <span>Build Your Bridal Look</span>
+            </button>
+          </div>
+
+          <MobileBridalLookSheet
+            isOpen={mobileSheetOpen}
+            onClose={() => setMobileSheetOpen(false)}
+            currentSuite={currentSuite}
+            activeSlot={activeSlot}
+            setActiveSlot={setActiveSlot}
+            handleSaveLook={handleSaveLook}
+            savedSuccess={savedSuccess}
+            whatsappUrl={whatsappUrl}
+            onOpenAppointment={onOpenAppointment}
+          />
+        </div>
+
+        {/* Desktop Presentation: Full Atelier Grid (100% Unchanged) */}
+        <div className="hidden md:grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Assembled Look Board (Visual Silhouette) */}
           <div className="lg:col-span-7 bg-[#121215] border border-[#C5A059]/30 rounded-sm p-6 sm:p-8 shadow-2xl">
             <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
@@ -79,7 +142,7 @@ export default function BridalLookBuilder({ onOpenAppointment }) {
                   The Royal Trousseau
                 </span>
                 <h3 className="font-serif text-2xl text-[#FAF8F5]">
-                  Your Customized Suite ({selectedCount} of 5 Adornments)
+                  Your Customized Suite ({selectedCount} of 6 Adornments)
                 </h3>
               </div>
               {savedSuccess && (

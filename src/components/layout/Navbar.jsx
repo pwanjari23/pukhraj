@@ -25,9 +25,11 @@ export default function Navbar({ onOpenSearch, onOpenAppointment }) {
   }, []);
 
   // Close mobile menu on route change
-  useEffect(() => {
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
     setMobileMenuOpen(false);
-  }, [pathname]);
+  }
 
   const navLinks = [
     { name: 'Home', href: '/' },

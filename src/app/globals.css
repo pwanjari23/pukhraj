@@ -73,13 +73,18 @@ body {
 
 /* Mobile Safe Bottom Spacing to prevent fixed nav overlap */
 .pb-mobile-nav {
-  padding-bottom: 5.5rem;
+  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
 }
 
 @media (min-width: 768px) {
   .pb-mobile-nav {
     padding-bottom: 0;
   }
+}
+
+/* Safe Area Inset Utility */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* Hide scrollbars gracefully for horizontal galleries */
@@ -89,11 +94,12 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Luxury Glassmorphism */
 .glass-nav {
-  background: rgba(10, 10, 12, 0.85);
+  background: rgba(10, 10, 12, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(197, 160, 89, 0.18);
@@ -112,3 +118,19 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(197, 160, 89, 0.28);
 }
+
+/* Luxury Mobile Bottom Sheet */
+.glass-sheet {
+  background: rgba(16, 16, 20, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile Touch Target minimum 44px */
+.min-touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+

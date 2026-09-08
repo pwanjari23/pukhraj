@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,8 +9,13 @@ import productsData from '@/data/products.json';
 
 export default function SearchOverlay({ isOpen, onClose }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
   const inputRef = useRef(null);
+
+  if (prevIsOpen !== isOpen) {
+    setPrevIsOpen(isOpen);
+    if (!isOpen) setSearchTerm('');
+  }
 
   useEffect(() => {
     if (isOpen) {
@@ -18,7 +23,6 @@ export default function SearchOverlay({ isOpen, onClose }) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
-      setSearchTerm('');
     }
     return () => {
       document.body.style.overflow = 'unset';
@@ -33,12 +37,9 @@ export default function SearchOverlay({ isOpen, onClose }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onClose]);
 
-  useEffect(() => {
+  const filteredProducts = useMemo(() => {
     const term = searchTerm.trim().toLowerCase();
-    if (!term) {
-      setFilteredProducts([]);
-      return;
-    }
+    if (!term) return [];
 
     const matches = productsData.filter((p) => {
       const matchName = p.name.toLowerCase().includes(term);
@@ -60,7 +61,7 @@ export default function SearchOverlay({ isOpen, onClose }) {
       );
     });
 
-    setFilteredProducts(matches.slice(0, 8));
+    return matches.slice(0, 8);
   }, [searchTerm]);
 
   const quickSearchTags = [
@@ -151,7 +152,7 @@ export default function SearchOverlay({ isOpen, onClose }) {
           {searchTerm && filteredProducts.length === 0 ? (
             <div className="text-center py-16 text-neutral-400 font-sans">
               <p className="text-base font-serif text-neutral-300 mb-2">No matching jewellery pieces found</p>
-              <p className="text-xs">Try searching for keywords like "Choker", "22K", "Diamond", "Bangles", or "Bridal".</p>
+              <p className="text-xs">Try searching for keywords like &ldquo;Choker&rdquo;, &ldquo;22K&rdquo;, &ldquo;Diamond&rdquo;, &ldquo;Bangles&rdquo;, or &ldquo;Bridal&rdquo;.</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">

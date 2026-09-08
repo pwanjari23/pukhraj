@@ -49,7 +49,7 @@ export default function InstagramSection() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-[#121215] text-[#FAF8F5] relative border-b border-white/10">
+    <section className="py-10 sm:py-14 md:py-28 bg-[#121215] text-[#FAF8F5] relative border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <SectionHeading
           tag="Social Connoisseurship"
@@ -57,8 +57,35 @@ export default function InstagramSection() {
           subtitle={`Join our digital jewellery salon at ${businessData.instagramHandle || '@pukhrajjewellers_nagpur'} for behind-the-scenes karigari and latest bridal reveals.`}
         />
 
-        {/* 6-Grid Social Posts */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 mb-10">
+        {/* Mobile: Compact Horizontal Visual Strip */}
+        <div className="flex sm:hidden overflow-x-auto snap-x snap-mandatory no-scrollbar gap-2.5 pb-2 mb-6 -mx-4 px-4">
+          {posts.map((post) => (
+            <a
+              key={`mobile-ig-${post.id}`}
+              href={businessData.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View Instagram post ${post.tag}`}
+              className="w-[42vw] max-w-[160px] aspect-square rounded-sm overflow-hidden bg-black/40 border border-white/10 shrink-0 snap-start relative block shadow-md"
+            >
+              <Image
+                src={post.image}
+                alt={`Instagram Post ${post.tag}`}
+                fill
+                sizes="160px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                <span className="text-[10px] font-sans text-neutral-300 truncate">
+                  {post.tag}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* Desktop: 6-Grid Social Posts (100% Unchanged) */}
+        <div className="hidden sm:grid sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 mb-10">
           {posts.map((post, idx) => (
             <motion.a
               key={post.id}

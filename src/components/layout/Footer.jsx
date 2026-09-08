@@ -60,7 +60,7 @@ export default function Footer({ onOpenAppointment }) {
             </div>
             <div>
               <h4 className="text-sm font-serif text-[#FAF8F5] tracking-wide">Generational Trust</h4>
-              <p className="text-xs text-neutral-400 mt-0.5">Crafting heirlooms for Vidarbha's finest families.</p>
+              <p className="text-xs text-neutral-400 mt-0.5">Crafting heirlooms for Vidarbha&apos;s finest families.</p>
             </div>
           </div>
         </div>

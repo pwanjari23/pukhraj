@@ -1,11 +1,15 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Palette, MessageSquare, Compass, Hammer, Sparkles, ArrowRight } from 'lucide-react';
 import { createCustomJewelleryWhatsAppLink } from '@/utils/whatsapp';
 import SectionHeading from '@/components/common/SectionHeading';
+import MobileCustomJewellerySheet from './MobileCustomJewellerySheet';
 
 export default function CustomJewellery() {
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
   const steps = [
     {
       num: '01',
@@ -41,14 +45,53 @@ export default function CustomJewellery() {
   });
 
   return (
-    <section className="py-20 md:py-28 bg-[#FAF8F5] text-neutral-900 relative">
+    <section id="custom-jewellery" className="py-10 sm:py-14 md:py-28 bg-[#FAF8F5] text-neutral-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          tag="Bespoke Karigari"
-          title="Bring Your Vision To Life"
-          subtitle="From reimagining cherished ancestral heirlooms to casting one-of-a-kind engagement rings."
-          theme="light"
-        />
+        {/* Mobile Presentation: Compact Teaser Card */}
+        <div className="block md:hidden">
+          <div className="bg-neutral-900 text-white rounded-sm p-6 shadow-xl space-y-3.5 relative overflow-hidden border border-[#C5A059]/30">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A059] font-sans font-semibold flex items-center gap-1.5">
+                <Sparkles className="w-3 h-3" />
+                <span>Bespoke Karigari</span>
+              </span>
+              <span className="text-[10px] text-neutral-400 font-sans">
+                Atelier
+              </span>
+            </div>
+
+            <h3 className="font-serif text-2xl text-[#FAF8F5]">
+              Create Something Unique
+            </h3>
+
+            <p className="text-xs text-neutral-300 font-sans font-light leading-relaxed">
+              Design something made for your moment. From reimagining cherished ancestral gold to casting bespoke engagement rings with Nagpur master karigars.
+            </p>
+
+            <button
+              type="button"
+              onClick={() => setIsSheetOpen(true)}
+              className="w-full py-3 bg-gradient-to-r from-[#DFBA73] via-[#C5A059] to-[#9E7934] text-black font-sans text-xs uppercase tracking-widest font-semibold rounded-sm shadow-md flex items-center justify-center gap-2 min-touch-target"
+            >
+              <Hammer className="w-3.5 h-3.5" />
+              <span>Start Custom Request</span>
+            </button>
+          </div>
+
+          <MobileCustomJewellerySheet
+            isOpen={isSheetOpen}
+            onClose={() => setIsSheetOpen(false)}
+          />
+        </div>
+
+        {/* Desktop Presentation: Full 4-Step Process & Large Banner (100% Unchanged) */}
+        <div className="hidden md:block">
+          <SectionHeading
+            tag="Bespoke Karigari"
+            title="Bring Your Vision To Life"
+            subtitle="From reimagining cherished ancestral heirlooms to casting one-of-a-kind engagement rings."
+            theme="light"
+          />
 
         {/* 4 Steps Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -108,6 +151,7 @@ export default function CustomJewellery() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

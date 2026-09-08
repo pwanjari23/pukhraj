@@ -1,54 +1,74 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useSyncExternalStore, useMemo } from 'react';
 import productsData from '@/data/products.json';
 
 const STORAGE_KEY = 'pukhraj_recently_viewed_ids';
 
-export function useRecentlyViewed() {
-  const [viewedIds, setViewedIds] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+function subscribe(callback) {
+  if (typeof window === 'undefined') return () => {};
+  window.addEventListener('recently-viewed-updated', callback);
+  window.addEventListener('storage', callback);
+  return () => {
+    window.removeEventListener('recently-viewed-updated', callback);
+    window.removeEventListener('storage', callback);
+  };
+}
 
-  useEffect(() => {
+function getSnapshot() {
+  if (typeof window === 'undefined') return '[]';
+  try {
+    return localStorage.getItem(STORAGE_KEY) || '[]';
+  } catch (e) {
+    return '[]';
+  }
+}
+
+function getServerSnapshot() {
+  return '[]';
+}
+
+export function useRecentlyViewed() {
+  const raw = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  const viewedIds = useMemo(() => {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        setViewedIds(JSON.parse(stored));
-      }
-    } catch (e) {
-      console.warn('LocalStorage error reading recently viewed:', e);
-    } finally {
-      setIsLoaded(true);
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
     }
-  }, []);
+  }, [raw]);
 
   const addViewedProduct = (productId) => {
     if (!productId) return;
     try {
       const filtered = viewedIds.filter((id) => id !== productId);
       const updated = [productId, ...filtered].slice(0, 8); // Keep last 8 items
-      setViewedIds(updated);
       localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+      window.dispatchEvent(new Event('recently-viewed-updated'));
     } catch (e) {
       console.warn('LocalStorage error saving recently viewed:', e);
     }
   };
 
   const clearRecentlyViewed = () => {
-    setViewedIds([]);
     try {
       localStorage.removeItem(STORAGE_KEY);
+      window.dispatchEvent(new Event('recently-viewed-updated'));
     } catch (e) {}
   };
 
-  const viewedProducts = viewedIds
-    .map((id) => productsData.find((p) => p.id === id))
-    .filter(Boolean);
+  const viewedProducts = useMemo(() => {
+    return viewedIds
+      .map((id) => productsData.find((p) => p.id === id))
+      .filter(Boolean);
+  }, [viewedIds]);
 
   return {
     viewedIds,
     viewedProducts,
-    isLoaded,
+    isLoaded: true,
     addViewedProduct,
     clearRecentlyViewed
   };

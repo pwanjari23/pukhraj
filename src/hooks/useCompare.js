@@ -1,41 +1,52 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useSyncExternalStore, useMemo } from 'react';
 import productsData from '@/data/products.json';
 
 const STORAGE_KEY = 'pukhraj_compare_ids';
 
-export function useCompare() {
-  const [compareIds, setCompareIds] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
+function subscribe(callback) {
+  if (typeof window === 'undefined') return () => {};
+  window.addEventListener('compare-updated', callback);
+  window.addEventListener('storage', callback);
+  return () => {
+    window.removeEventListener('compare-updated', callback);
+    window.removeEventListener('storage', callback);
+  };
+}
 
-  useEffect(() => {
+function getSnapshot() {
+  if (typeof window === 'undefined') return '[]';
+  try {
+    return localStorage.getItem(STORAGE_KEY) || '[]';
+  } catch (e) {
+    return '[]';
+  }
+}
+
+function getServerSnapshot() {
+  return '[]';
+}
+
+export function useCompare() {
+  const [isOpen, setIsOpen] = useState(false);
+  const raw = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  const compareIds = useMemo(() => {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) setCompareIds(JSON.parse(stored));
-    } catch (e) {}
-  }, []);
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  }, [raw]);
 
   const saveToStorage = (ids) => {
-    setCompareIds(ids);
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
       window.dispatchEvent(new Event('compare-updated'));
     } catch (e) {}
   };
-
-  useEffect(() => {
-    const handleSync = () => {
-      try {
-        const stored = localStorage.getItem(STORAGE_KEY);
-        if (stored) setCompareIds(JSON.parse(stored));
-        else setCompareIds([]);
-      } catch (e) {}
-    };
-
-    window.addEventListener('compare-updated', handleSync);
-    return () => window.removeEventListener('compare-updated', handleSync);
-  }, []);
 
   const addToCompare = (productId) => {
     if (!productId) return false;
@@ -62,9 +73,11 @@ export function useCompare() {
     saveToStorage([]);
   };
 
-  const compareProducts = compareIds
-    .map((id) => productsData.find((p) => p.id === id))
-    .filter(Boolean);
+  const compareProducts = useMemo(() => {
+    return compareIds
+      .map((id) => productsData.find((p) => p.id === id))
+      .filter(Boolean);
+  }, [compareIds]);
 
   return {
     compareIds,

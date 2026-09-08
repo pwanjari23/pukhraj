@@ -97,7 +97,7 @@ export default function OwnerPresentationPage() {
         </h1>
 
         <p className="text-sm sm:text-base text-neutral-300 font-sans font-light max-w-2xl mx-auto mt-4 leading-relaxed">
-          Prepared exclusively for the owners and directors of Pukhraj Jewellers, Nagpur. A comprehensive transformation of your brand's digital presence into a digital flagship showroom.
+          Prepared exclusively for the owners and directors of Pukhraj Jewellers, Nagpur. A comprehensive transformation of your brand&apos;s digital presence into a digital flagship showroom.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -263,7 +263,7 @@ export default function OwnerPresentationPage() {
           Ready to Make This the Official Face of Pukhraj?
         </h2>
         <p className="text-xs sm:text-sm text-neutral-400 font-sans max-w-lg mx-auto">
-          We are ready to plug in the store owner's verified contact details, official showroom photography, and live WhatsApp number.
+          We are ready to plug in the store owner&apos;s verified contact details, official showroom photography, and live WhatsApp number.
         </p>
         <div className="pt-2 flex flex-col sm:flex-row justify-center gap-4">
           <Link

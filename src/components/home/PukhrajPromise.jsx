@@ -34,7 +34,7 @@ export default function PukhrajPromise() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-[#09090b] text-[#FAF8F5] relative border-b border-white/10">
+    <section className="py-10 sm:py-14 md:py-28 bg-[#09090b] text-[#FAF8F5] relative border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           tag="Pillars of Integrity"
@@ -42,7 +42,37 @@ export default function PukhrajPromise() {
           subtitle="Our sacred commitments that have made Pukhraj Jewellers a trusted name across Nagpur and Central India."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+        {/* Mobile: Compact 2x2 Trust Matrix */}
+        <div className="grid grid-cols-2 gap-2.5 sm:hidden">
+          {pillars.slice(0, 4).map((p) => {
+            const Icon = p.icon;
+            return (
+              <div
+                key={`mobile-${p.title}`}
+                className="p-3 bg-[#121215] border border-white/10 rounded-sm flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-8 h-8 rounded-full bg-[#C5A059]/10 border border-[#C5A059]/25 flex items-center justify-center text-[#C5A059] mb-2">
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <h3 className="font-serif text-sm text-[#FAF8F5] mb-1">
+                    {p.title}
+                  </h3>
+                  <p className="text-[10px] text-neutral-400 font-sans font-light line-clamp-2 leading-relaxed">
+                    {p.desc}
+                  </p>
+                </div>
+                <div className="mt-2 pt-2 border-t border-white/5 flex items-center gap-1 text-[9px] text-[#C5A059] font-sans">
+                  <CheckCircle className="w-3 h-3" />
+                  <span>Verified Standard</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Desktop: 5-Column Grid (100% Unchanged) */}
+        <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           {pillars.map((p, idx) => {
             const Icon = p.icon;
             return (

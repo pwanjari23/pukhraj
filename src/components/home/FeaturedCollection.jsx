@@ -12,7 +12,7 @@ export default function FeaturedCollection() {
   const featured = productsData.filter((p) => p.isFeatured === true).slice(0, 5);
 
   return (
-    <section className="py-20 md:py-28 bg-[#121215] border-b border-white/10 relative overflow-hidden">
+    <section className="py-10 sm:py-14 md:py-28 bg-[#121215] border-b border-white/10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           tag="Curator's Showcase"
@@ -21,15 +21,15 @@ export default function FeaturedCollection() {
         />
 
         {/* Horizontal Editorial Gallery */}
-        <div className="flex gap-6 overflow-x-auto no-scrollbar pb-6 pt-2 snap-x snap-mandatory">
+        <div className="flex gap-3 sm:gap-6 overflow-x-auto no-scrollbar pb-3 sm:pb-6 pt-1 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0">
           {featured.map((product, idx) => (
             <motion.div
               key={product.id}
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="w-[300px] sm:w-[360px] md:w-[400px] shrink-0 snap-start bg-[#16161c] border border-white/10 hover:border-[#C5A059]/50 rounded-sm overflow-hidden flex flex-col group transition-all duration-500 shadow-xl"
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              className="w-[72vw] max-w-[290px] sm:w-[360px] md:w-[400px] shrink-0 snap-start bg-[#16161c] border border-white/10 hover:border-[#C5A059]/50 rounded-sm overflow-hidden flex flex-col group transition-all duration-500 shadow-xl"
             >
               <div className="relative aspect-[4/5] bg-black/40 overflow-hidden">
                 <Image

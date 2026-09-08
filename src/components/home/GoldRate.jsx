@@ -49,7 +49,7 @@ export default function GoldRate() {
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
             <div className="flex flex-col">
               <h2 className="font-serif text-xl sm:text-2xl text-[#FAF8F5] tracking-wide flex items-center gap-2">
-                <span>Today's Bullion & Gold Rates</span>
+                <span>Today&apos;s Bullion & Gold Rates</span>
                 <span className="text-[10px] px-2 py-0.5 rounded bg-[#C5A059]/20 text-[#E2C792] font-sans font-normal uppercase tracking-wider">
                   Nagpur Market
                 </span>

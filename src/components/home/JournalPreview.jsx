@@ -11,28 +11,68 @@ export default function JournalPreview() {
   const articles = articlesData.slice(0, 3);
 
   return (
-    <section className="py-20 md:py-28 bg-[#0a0a0c] text-[#FAF8F5] relative border-b border-white/10">
+    <section className="py-10 sm:py-14 md:py-28 bg-[#0a0a0c] text-[#FAF8F5] relative border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-12">
           <div>
-            <span className="text-xs uppercase tracking-[0.25em] text-[#C5A059] font-sans font-semibold block mb-2">
-              The Connoisseur's Chronicle
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#C5A059] font-sans font-semibold block mb-1.5">
+              The Connoisseur&apos;s Chronicle
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#FAF8F5]">
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl text-[#FAF8F5]">
               Jewellery Journal & Guides
             </h2>
           </div>
 
           <Link
             href="/journal"
-            className="mt-4 sm:mt-0 inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#C5A059] hover:text-[#E2C792] font-sans font-medium transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#C5A059] hover:text-[#E2C792] font-sans font-medium transition-colors"
           >
             <span>Read All Articles</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Mobile: 2 Compact Articles */}
+        <div className="grid grid-cols-1 gap-3.5 sm:hidden">
+          {articles.slice(0, 2).map((art) => (
+            <article
+              key={`mobile-art-${art.id}`}
+              className="bg-[#141418] border border-white/10 rounded-sm overflow-hidden flex flex-row items-center gap-3 p-2.5"
+            >
+              <div className="relative w-24 h-24 shrink-0 rounded-sm overflow-hidden bg-black/40">
+                <Image
+                  src={art.image}
+                  alt={art.title}
+                  fill
+                  sizes="100px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex-1 min-w-0 pr-1">
+                <div className="flex items-center gap-2 text-[10px] text-[#C5A059] font-sans mb-1">
+                  <span>{art.category}</span>
+                  <span>•</span>
+                  <span>{art.readTime}</span>
+                </div>
+                <Link href={`/journal/${art.slug}`}>
+                  <h3 className="font-serif text-sm text-[#FAF8F5] line-clamp-2 leading-snug">
+                    {art.title}
+                  </h3>
+                </Link>
+                <Link
+                  href={`/journal/${art.slug}`}
+                  className="inline-flex items-center gap-1 text-[11px] uppercase tracking-wider text-[#C5A059] font-sans mt-2"
+                >
+                  <span>Read Guide</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Desktop: 3 Articles Grid (100% Unchanged) */}
+        <div className="hidden sm:grid sm:grid-cols-3 gap-6">
           {articles.map((art, idx) => (
             <motion.article
               key={art.id}

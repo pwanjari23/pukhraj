@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Sparkles, Crown, ArrowRight, ShieldCheck } from 'lucide-react';
 
+import MobileBridalJourney from './MobileBridalJourney';
+
 export default function BridalSection({ onOpenAppointment }) {
   const bridalAdornments = [
     'Imperial Bridal Sets',
@@ -17,7 +19,7 @@ export default function BridalSection({ onOpenAppointment }) {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-[#0c0c0f] text-[#FAF8F5] relative overflow-hidden border-y border-[#C5A059]/20">
+    <section className="py-10 sm:py-14 md:py-32 bg-[#0c0c0f] text-[#FAF8F5] relative overflow-hidden border-y border-[#C5A059]/20">
       {/* Background Ambience */}
       <div className="absolute inset-0 z-0 opacity-25">
         <Image
@@ -31,9 +33,28 @@ export default function BridalSection({ onOpenAppointment }) {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Mobile Presentation: Horizontal Storytelling Carousel */}
+        <div className="block md:hidden">
+          <div className="mb-4">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C5A059]/15 border border-[#C5A059]/30 text-[#E2C792] text-[10px] uppercase tracking-[0.22em] font-sans font-medium mb-2">
+              <Crown className="w-3 h-3 text-[#C5A059]" />
+              <span>Royal Bridal Haven</span>
+            </div>
+            <h2 className="font-serif text-2xl text-[#FAF8F5] uppercase tracking-tight leading-tight">
+              The Bridal Journey
+            </h2>
+            <p className="text-xs text-neutral-300 font-sans mt-1">
+              Four sacred chapters of adornment crafted for her most unforgettable day.
+            </p>
+          </div>
+
+          <MobileBridalJourney onOpenAppointment={onOpenAppointment} />
+        </div>
+
+        {/* Desktop Presentation (100% Unchanged) */}
+        <div className="hidden md:grid md:grid-cols-12 gap-12 items-center">
           {/* Left Text Presentation */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="md:col-span-7 space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}

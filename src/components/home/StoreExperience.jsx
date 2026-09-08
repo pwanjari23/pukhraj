@@ -11,7 +11,7 @@ import SectionHeading from '@/components/common/SectionHeading';
 
 export default function StoreExperience({ onOpenAppointment }) {
   return (
-    <section className="py-20 md:py-28 bg-[#121215] text-[#FAF8F5] relative overflow-hidden border-b border-white/10">
+    <section className="py-10 sm:py-14 md:py-28 bg-[#121215] text-[#FAF8F5] relative overflow-hidden border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           tag="Nagpur Flagship Showroom"
@@ -19,9 +19,57 @@ export default function StoreExperience({ onOpenAppointment }) {
           subtitle="Experience the grandeur of our private bridal viewing lounges, state-of-the-art karat testing, and warm hospitality."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        {/* Mobile Presentation: Compact Showroom Invitation */}
+        <div className="block md:hidden">
+          <div className="bg-[#18181f] border border-[#C5A059]/30 rounded-sm overflow-hidden shadow-xl">
+            <div className="relative aspect-[16/9] w-full bg-black/50">
+              <Image
+                src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85"
+                alt="Pukhraj Jewellers Nagpur Showroom"
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#18181f] via-[#18181f]/40 to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <span className="text-[10px] uppercase tracking-widest text-[#C5A059] font-sans font-semibold block mb-0.5">
+                  Flagship Destination • Nagpur
+                </span>
+                <h3 className="font-serif text-xl text-[#FAF8F5]">
+                  Private Viewing Suites
+                </h3>
+              </div>
+            </div>
+
+            <div className="p-4 space-y-3">
+              <p className="text-xs text-neutral-300 font-sans leading-relaxed">
+                Step into our dedicated bridal haven in Nagpur for one-on-one styling with certified gemologists and master jewellery consultants.
+              </p>
+
+              <div className="grid grid-cols-2 gap-2 pt-1">
+                <a
+                  href="#store-location"
+                  className="py-2.5 px-3 bg-gradient-to-r from-[#DFBA73] via-[#C5A059] to-[#9E7934] text-black font-sans text-xs uppercase tracking-wider font-semibold rounded-sm text-center flex items-center justify-center min-touch-target"
+                >
+                  Visit Store
+                </a>
+                <button
+                  type="button"
+                  onClick={onOpenAppointment}
+                  className="py-2.5 px-3 bg-white/10 hover:bg-white/15 border border-white/20 text-[#FAF8F5] font-sans text-xs uppercase tracking-wider font-medium rounded-sm flex items-center justify-center gap-1 min-touch-target"
+                >
+                  <Calendar className="w-3.5 h-3.5 text-[#C5A059]" />
+                  <span>Book Suite</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Presentation: Full Image Collage & Info (100% Unchanged) */}
+        <div className="hidden md:grid md:grid-cols-12 gap-10 items-center">
           {/* Showroom Images Collage */}
-          <div className="lg:col-span-7 grid grid-cols-2 gap-4">
+          <div className="md:col-span-7 grid grid-cols-2 gap-4">
             <div className="relative aspect-[4/5] rounded-sm overflow-hidden border border-white/10 shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85"

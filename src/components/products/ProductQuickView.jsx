@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,6 +11,17 @@ import { createProductWhatsAppLink } from '@/utils/whatsapp';
 export default function ProductQuickView({ product, isOpen, onClose }) {
   const { isInWishlist, toggleWishlist } = useWishlist();
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   if (!product) return null;
 
   const inWishlist = isInWishlist(product.id);
@@ -18,37 +30,42 @@ export default function ProductQuickView({ product, isOpen, onClose }) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6 overflow-hidden">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/80 backdrop-blur-md"
+            className="fixed inset-0 bg-black/85 backdrop-blur-md"
           />
 
-          {/* Modal Card */}
+          {/* Modal / Bottom Sheet Card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative w-full max-w-3xl glass-modal rounded-sm overflow-hidden z-10 shadow-2xl border border-[#C5A059]/30"
+            initial={{ y: '100%', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: '100%', opacity: 0 }}
+            transition={{ type: 'spring', damping: 28, stiffness: 300 }}
+            className="relative w-full sm:max-w-3xl max-h-[92vh] sm:max-h-[85vh] bg-[#121215] border-t sm:border border-[#C5A059]/30 rounded-t-2xl sm:rounded-sm overflow-hidden z-10 shadow-2xl flex flex-col pb-safe sm:pb-0"
           >
+            {/* Mobile Pull Handle */}
+            <div className="sm:hidden pt-2.5 pb-1 flex justify-center shrink-0">
+              <div className="w-12 h-1 bg-white/20 rounded-full" />
+            </div>
+
             {/* Close Button */}
             <button
               type="button"
               onClick={onClose}
-              aria-label="Close modal"
-              className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-black/60 hover:bg-black text-neutral-300 hover:text-white flex items-center justify-center border border-white/10 transition-colors"
+              aria-label="Close quick view"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 hover:bg-black text-neutral-300 hover:text-white flex items-center justify-center border border-white/10 transition-colors min-touch-target"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
 
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 overflow-y-auto no-scrollbar flex-1">
               {/* Product Image */}
-              <div className="relative aspect-[4/5] md:aspect-auto md:h-full bg-[#18181d] min-h-[320px]">
+              <div className="relative aspect-[4/3] sm:aspect-[4/5] md:aspect-auto md:h-full bg-[#18181d] min-h-[220px] sm:min-h-[320px]">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -56,8 +73,8 @@ export default function ProductQuickView({ product, isOpen, onClose }) {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-center"
                 />
-                <div className="absolute top-4 left-4">
-                  <span className="px-2.5 py-1 text-[10px] font-sans font-semibold tracking-wider text-[#FAF8F5] bg-[#0a0a0c]/80 border border-[#C5A059]/40 rounded-sm uppercase">
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                  <span className="px-2 sm:px-2.5 py-0.5 sm:py-1 text-[9px] sm:text-[10px] font-sans font-semibold tracking-wider text-[#FAF8F5] bg-[#0a0a0c]/85 border border-[#C5A059]/40 rounded-sm uppercase">
                     {product.purity || '22K Hallmarked'}
                   </span>
                 </div>
