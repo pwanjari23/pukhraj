@@ -10,24 +10,6 @@ export default function Footer({ onOpenAppointment }) {
   const cleanWaNumber = getCleanWhatsAppNumber();
   const rawPhone = businessData.phoneRaw || businessData.phone.replace(/[^0-9+]/g, '');
 
-  const collectionsLinks = [
-    { name: 'Gold Jewellery', href: '/collections?category=gold-jewellery' },
-    { name: 'Bridal Suites', href: '/bridal' },
-    { name: 'Diamond Solitaires', href: '/collections?category=diamond-jewellery' },
-    { name: 'Polki & Kundan', href: '/collections?category=polki-kundan' },
-    { name: 'Daily Wear Gold', href: '/collections?category=daily-wear' },
-    { name: 'Silver & Pooja', href: '/collections?category=silver-jewellery' }
-  ];
-
-  const quickLinks = [
-    { name: 'About Our Heritage', href: '/about' },
-    { name: 'Bridal Look Builder', href: '/bridal' },
-    { name: 'Jewellery Journal', href: '/journal' },
-    { name: 'Gold & Diamond Care', href: '/journal/how-to-clean-and-care-for-gold-jewellery' },
-    { name: 'Customer Wishlist', href: '/wishlist' },
-    { name: 'Owner Proposal Deck', href: '/presentation' },
-    { name: 'Contact & Showroom', href: '/contact' }
-  ];
 
   return (
     <footer className="bg-[#070709] border-t border-[#C5A059]/20 text-neutral-400 font-sans pb-24 md:pb-12 pt-16">
@@ -66,9 +48,9 @@ export default function Footer({ onOpenAppointment }) {
         </div>
 
         {/* Main Footer Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 pb-12">
           {/* Col 1: Brand & Bio */}
-          <div className="space-y-4">
+          <div className="space-y-4 max-w-md">
             <div className="flex flex-col">
               <span className="font-serif text-2xl tracking-[0.25em] text-[#FAF8F5] uppercase">
                 PUKHRAJ
@@ -118,48 +100,8 @@ export default function Footer({ onOpenAppointment }) {
             </div>
           </div>
 
-          {/* Col 2: Jewellery Collections */}
-          <div>
-            <h3 className="font-serif text-base text-[#FAF8F5] tracking-wider mb-4 uppercase">
-              Collections
-            </h3>
-            <ul className="space-y-2.5 text-xs">
-              {collectionsLinks.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="hover:text-[#C5A059] transition-colors flex items-center gap-1.5"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-[#C5A059]/50" />
-                    <span>{item.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 3: Navigation & Guides */}
-          <div>
-            <h3 className="font-serif text-base text-[#FAF8F5] tracking-wider mb-4 uppercase">
-              The Atelier
-            </h3>
-            <ul className="space-y-2.5 text-xs">
-              {quickLinks.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="hover:text-[#C5A059] transition-colors flex items-center gap-1.5"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-[#C5A059]/50" />
-                    <span>{item.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 4: Showroom & Hours */}
-          <div className="space-y-3 text-xs">
+          {/* Col 2: Showroom & Hours */}
+          <div className="space-y-3 text-xs md:max-w-md md:ml-auto w-full">
             <h3 className="font-serif text-base text-[#FAF8F5] tracking-wider mb-4 uppercase">
               Nagpur Showroom
             </h3>
