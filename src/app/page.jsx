@@ -4,7 +4,6 @@ import { useGlobalUI } from '@/components/layout/RootClientLayout';
 import Hero from '@/components/home/Hero';
 import QuickActionBar from '@/components/home/QuickActionBar';
 import GoldRate from '@/components/home/GoldRate';
-import CollectionsSection from '@/components/home/CollectionsSection';
 import NewArrivals from '@/components/home/NewArrivals';
 import TrendingSection from '@/components/home/TrendingSection';
 import MobileQuickExplore from '@/components/home/MobileQuickExplore';
@@ -67,10 +66,7 @@ export default function HomePage() {
         <GoldRate />
       </div>
 
-      {/* 6. Collection Explorer */}
-      <CollectionsSection />
-
-      {/* 7. New Arrivals */}
+      {/* 6. New Arrivals */}
       <NewArrivals
         onQuickView={openQuickView}
         onAddToCompare={addToCompare}
